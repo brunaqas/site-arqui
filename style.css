@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: #f1f6fc31; 
+}
+h3{
+  font-size: 10px;  
+}
+p{
+    color: #0000009c; 
+}
+.container{
+    max-width: 14000 px;
+    margin: auto;
+    padding: 0 1%;
+}
+.btn{
+    background-color: #888888;
+    color: white;
+    padding:12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+    
+}
+.btn:hover{
+    background-color: #7c7777;
+}
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-top:0px;
+    height: 31vh;
+    width: 0%;
+    padding: 0%;
+}
+nav ul{
+    display:flex;
+    align-items:center;
+}
+nav ul a{
+    color: white;
+    margin:0 18px;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+}
+nav ul a:not(.btn)::after{
+    content: "";
+    background-color: #888888;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 100 auto;
+    transition: 0.3s;
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-text{
+   width: 50%;
+   padding-right: 40px;
+}
+.sobre .sobre-text p{
+    margin: 18px 0;
+    color: black;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.banner .banner-text{
+    margin: 170px;
+    text-align: center;
+    padding: 40 90px;
+}
+.banner .banner-text h1{
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+}
+.banner .banner-text p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: 10px 0;
+}
+.depoimentos h3{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+.depoimentos p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.depoimentos .card-item{
+    background-color:#888888;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 380px;
+    transition: 0.3s;
+}
+.depoimentos .card-item img{
+    border-radius: 10%;
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
+.depoimentos .card-item .nome-user{
+    font-weight: 1000;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.depoimentos .card-item .depoimentos-user{
+    font-size: 15px;
+    padding: 0 15px;  
+}
+.depoimentos .card-item:hover{
+    background-color :#5f5d5d;
+    margin-top: -5px;
+}
+.depoimentos .card-item:hover .nome-user{
+    color: white;
+}
+.depoimentos .card-item:hover .depoimento-user{
+    color:white 
+}
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-texto{
+   width: 50%;
+   padding-right: 40px;
+}
+.sobre .sobre-texto p{
+    margin: 18px 0;
+    color: black;
+}
+.sobre .sobre-img{
+    width: 50%;
+}
+.sobre .sobre-img img{
+    width: 100%;
+    border-radius: 10px;
+}
