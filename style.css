@@ -12,25 +12,24 @@ body{
     background-color: #f1f6fc31; 
 }
 h3{
-  font-size: 10px;  
+  font-size: 50px;  
 }
 p{
     color: #0000009c; 
 }
 .container{
-    max-width: 14000 px;
-    margin: auto;
-    padding: 0 1%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 .btn{
-    background-color: #888888;
+    background-color: #504c4c;
     color: white;
-    padding:12px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
     display: inline-block;
     transition: 0.1s;
-    
 }
 .btn:hover{
     background-color: #7c7777;
@@ -43,11 +42,13 @@ header{
 nav{
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    padding-top:0px;
-    height: 31vh;
-    width: 0%;
-    padding: 0%;
+    justify-content: space-between;
+    padding-top: 0 100px 0 100px;
+    height: 180px;
+    width: 100%;
+}
+nav img{
+    width: 25%;
 }
 nav ul{
     display:flex;
@@ -55,23 +56,62 @@ nav ul{
 }
 nav ul a{
     color: white;
-    margin:0 18px;
+    margin: 0 10px;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 17px;
     display: block;
+    padding: 8px 15px;
 }
+nav .menu-icon i{
+    color: #fff;
+    cursor:pointer;
+    display: none;
+}
+
 nav ul a:not(.btn)::after{
     content: "";
     background-color: #888888;
-    height: 3px;
+    height: 2px;
     width: 0%;
     display: block;
-    margin: 100 auto;
+    margin: 1000 auto;
     transition: 0.3s;
 }
 nav ul a:hover::after{
     width: 100%;
 }
+@media (max-width: 830px){
+    nav .menu-icon i{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #003840;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        flex-direction: column;
+    }
+    nav ul.open{
+        left: 0;
+    }
+    nav ul a{
+        width: 100%;
+        margin: 50px 0;
+        font-size: 23px;
+    }
+    nav ul a.active,
+    nav ul a:hover{
+        background: none;
+        color: #5f5d5d;
+    }
+}
+/*página qmsomos*/
+
 .sobre .container{
     display: flex;
     align-items: center;
@@ -80,10 +120,19 @@ nav ul a:hover::after{
 .sobre .sobre-text{
    width: 50%;
    padding-right: 40px;
+   padding-top: 60px;
+   padding-bottom: 40px;
 }
 .sobre .sobre-text p{
     margin: 18px 0;
     color: black;
+}
+.sobre .sobre-img{ 
+    width: 50%;
+}
+.sobre .sobre-img img{
+    width: 100%;
+    border-radius: 10px;
 }
 .banner{
     display: flex;
@@ -92,26 +141,24 @@ nav ul a:hover::after{
 .banner .banner-text{
     margin: 170px;
     text-align: center;
-    padding: 40 90px;
+    padding: 0 90px;
 }
 .banner .banner-text h1{
-    font-size: 100px;
-    color: rgb(255, 255, 255);
+    font-size: 110px;
+    color: white;
 }
 .banner .banner-text p{
-    font-size: 20px;
-    color: #ffffff;
+    font-size: 25px;
+    color: #ffffffb7;
     font-weight: lighter;
-    margin: 10px 0;
+    margin: 18px 0;
 }
 .depoimentos h3{
-    font-size: 30px;
     text-align: center;
     margin-top: 50px;
 }
 .depoimentos p{
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
 }
 .cards{
@@ -120,22 +167,22 @@ nav ul a:hover::after{
 }
 .depoimentos .card-item{
     background-color:#888888;
-    margin: 15px;
-    border-radius: 14px;
+    margin: 20px;
+    border-radius: 15px;
     text-align: center;
     width: 380px;
     transition: 0.3s;
 }
 .depoimentos .card-item img{
-    border-radius: 10%;
+    border-radius: 3%;
     width: 100px;
     display: block;
     margin: 20px auto;
 }
 .depoimentos .card-item .nome-user{
-    font-weight: 1000;
+    font-weight: 100%;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .depoimentos .card-item .depoimentos-user{
     font-size: 15px;
@@ -143,7 +190,7 @@ nav ul a:hover::after{
 }
 .depoimentos .card-item:hover{
     background-color :#5f5d5d;
-    margin-top: -5px;
+    margin-top: 0px;
 }
 .depoimentos .card-item:hover .nome-user{
     color: white;
@@ -151,23 +198,49 @@ nav ul a:hover::after{
 .depoimentos .card-item:hover .depoimento-user{
     color:white 
 }
-.sobre .container{
+footer{
+    background: #5f5d5d;
+    height: auto;
+    width: 100vw;
+    padding-top: 30px;
+}
+.footer-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
-.sobre .sobre-texto{
-   width: 50%;
-   padding-right: 40px;
+.footer-content p{
+    max-width: 800px;
+    line-height: 28px;
+    font-size: 17px;
 }
-.sobre .sobre-texto p{
-    margin: 18px 0;
-    color: black;
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
 }
-.sobre .sobre-img{
-    width: 50%;
+.socials li{
+    margin: 0 10px;
 }
-.sobre .sobre-img img{
-    width: 100%;
-    border-radius: 10px;
+.socials a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.733);
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .2s ease;
+}
+.socials a:hover i{
+    color: white;
+}
+.footer-bottom{
+    width: 100vw;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 15px;
 }
