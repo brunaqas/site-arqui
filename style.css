@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -10,6 +10,7 @@
 }
 body{
     background-color: #f1f6fc31; 
+    overflow-x: hidden;    
 }
 h3{
   font-size: 50px;  
@@ -18,14 +19,15 @@ p{
     color: #0000009c; 
 }
 .container{
-    max-width: 14000 px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 5%;
 }
+
 .btn{
-    background-color: #888888;
+    background-color: #504c4c;
     color: white;
-    padding:15px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
     display: inline-block;
@@ -36,37 +38,52 @@ p{
 }
 header{
     background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size:cover;
+    background-attachment:fixed;
+    height: 100vh;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0px;
+    padding-top: 35px;
+    height: 150px;
+    width: 100%;
+    
+}
+nav img{
+    width: 40vh;
+    margin-left: -30%;
 }
 nav ul{
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:center;
 }
 nav ul a{
     color: white;
-    margin:0 25px;
+    margin: 0 10px;
     text-transform: uppercase;
     font-size: 18px;
     display: block;
+    padding: 0px 14px;
 }
+nav .menu-icon i{
+    color: #fff;
+    cursor:pointer;
+    display: none;
+}
+
 nav ul a:not(.btn)::after{
     content: "";
     background-color: #888888;
-    height: 3px;
+    height: 2px;
     width: 0%;
     display: block;
-    margin: 0 auto;
+    margin: 1000 auto;
     transition: 0.3s;
 }
 nav ul a:hover::after{
-    width: 100%;
+    width: 100%;   
 }
 .sobre .container{
     display: flex;
@@ -76,26 +93,37 @@ nav ul a:hover::after{
 .sobre .sobre-text{
    width: 50%;
    padding-right: 40px;
+   padding-top: 60px;
+   padding-bottom: 60px;
 }
 .sobre .sobre-text p{
     margin: 18px 0;
     color: black;
+    font-size: 110%;
+}
+.sobre .sobre-img{ 
+    width: 50%;
+}
+.sobre .sobre-img img{
+    width: 110%;
+    border-radius: 10px;
 }
 .banner{
     display: flex;
     justify-content: center;
 }
 .banner .banner-text{
-    margin: 170px;
+    margin: 150px;
     text-align: center;
     padding: 0 90px;
 }
 .banner .banner-text h1{
-    font-size: 90px;
+    font-size: 96px;
     color: white;
+    padding-top: 10%;
 }
 .banner .banner-text p{
-    font-size: 20px;
+    font-size: 25px;
     color: #ffffffb7;
     font-weight: lighter;
     margin: 18px 0;
@@ -105,31 +133,32 @@ nav ul a:hover::after{
     margin-top: 50px;
 }
 .depoimentos p{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
 }
 .cards{
     display: flex;
     justify-content: center;
+    padding-bottom: 7%;
 }
 .depoimentos .card-item{
     background-color:#888888;
-    margin: 15px;
-    border-radius: 14px;
+    margin: 20px;
+    border-radius: 15px;
     text-align: center;
     width: 380px;
     transition: 0.3s;
 }
 .depoimentos .card-item img{
-    border-radius: 10%;
+    border-radius: 3%;
     width: 100px;
     display: block;
     margin: 20px auto;
 }
 .depoimentos .card-item .nome-user{
-    font-weight: 1000;
+    font-weight: 100%;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .depoimentos .card-item .depoimentos-user{
     font-size: 15px;
@@ -137,7 +166,7 @@ nav ul a:hover::after{
 }
 .depoimentos .card-item:hover{
     background-color :#5f5d5d;
-    margin-top: -5px;
+    margin-top: 0px;
 }
 .depoimentos .card-item:hover .nome-user{
     color: white;
@@ -145,23 +174,117 @@ nav ul a:hover::after{
 .depoimentos .card-item:hover .depoimento-user{
     color:white 
 }
-.sobre .container{
+.wrapper{
+    max-width: 62%;
+    min-height: 40vh;
+    padding-bottom: 30px;   
+}
+.wrapper p{
+    font-size: 20px;
+    padding-top: 20px;
+    color: rgba(0, 0, 0, 0.808);
+    margin-left: 5%;   
+}
+.wrapper .carrosel{
+    white-space: nowrap;
+}
+.carrosel img{
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    margin-top: 20px;
+    width: calc(100% /1.95);
+}
+/*pg contato*/
+.mapa{
+    margin-top: 30px;
+}
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+.contato-info .right-side{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px ;
+}
+.contato-info .right-side inpupt{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    font-weight:lighter ;
+}
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus{
+    border-color:#888888;
+}
+.contato-info .right-side textarea{
+    border: 1ps solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;     
+}
+.contato-info .right-side button{
+    border: none;
+}
+
+/* end pg contato*/
+
+footer{
+    background: #5f5d5d;
+    height: auto;
+    width: 100%;
+    padding-top: 20px;
+}
+.footer-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
-.sobre .sobre-texto{
-   width: 50%;
-   padding-right: 40px;
+.footer-content p{
+    max-width: 800px;
+    line-height: 30px;
+    font-size: 17px;
 }
-.sobre .sobre-texto p{
-    margin: 18px 0;
-    color: black;
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
 }
-.sobre .sobre-img{
-    width: 50%;
+.socials li{
+    margin: 0 10px;
 }
-.sobre .sobre-img img{
+.socials a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.733);
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .2s ease;
+}
+.socials a:hover i{
+    color: white;
+}
+.footer-bottom{
     width: 100%;
-    border-radius: 10px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 15px;
 }
